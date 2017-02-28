@@ -1,0 +1,32 @@
+doctype
+html
+    head
+        block title
+            title Tachyon
+        link(rel='stylesheet' href='../../../node_modules/material-design-lite/material.min.css')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
+        //- link(rel='stylesheet' href='../css/main.css')
+        //- Libraries
+        script(src='../../../node_modules/material-design-lite/material.min.js')
+    body
+        .mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
+            header.mdl-layout__header
+            .mdl-layout__drawer
+                span.mdl-layout-title Tachyon
+                nav.mdl-navigation
+                    .search.mdl-textfield.mdl-js-textfield
+                        input.mdl-textfield__input(type='text' placeholder='Search')
+                    a.mdl-navigation__link.mdl-navigation__link--current(href='' item='home' component='NavItem') Home
+                    a.mdl-navigation__link(href='' item='library' component='NavItem') Library
+                    .mdl-accordion
+                        a.mdl-navigation__link.mdl-accordion__button(href='', item='genres', component='NavItem') Genres
+                            i.material-icons.mdl-accordion__icon.mdl-animation--default expand_more
+                        .mdl-accordion__content-wrapper
+                            .mdl-accordion__content.mdl-animation--default
+                                a.mdl-navigation__link(href='', component='NavItem GenreItem', item='genre', genre='all') All
+                                a.mdl-navigation__link(href='', component='NavItem GenreItem', item='genre', genre='action') Action
+                                a.mdl-navigation__link(href='', component='NavItem GenreItem', item='genre', genre='family') Family
+                                a.mdl-navigation__link(href='', component='NavItem GenreItem', item='genre', genre='match-3') Match 3
+                                a.mdl-navigation__link(href='', component='NavItem GenreItem', item='genre', genre='shooter') Shooter
+            main.mdl-layout__content
+                block content

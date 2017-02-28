@@ -1,0 +1,13 @@
+extend partials/header.pug
+block content
+    style.
+        body{padding:0;margin:0}
+    //- div.mdl-grid
+        //- .mdl-card.mdl-shadow--4dp.mdl-cell.mdl-cell--12-col.filter
+        //-     .mdl-card__supporting-text
+        //-         .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+        //-             input.mdl-textfield__input#filter(type='text' component='Filter')
+        //-             label.mdl-textfield__label(for='filter') Filter
+    //- div.mdl-grid#game-list(component='GameList')
+    div.mdl-grid.hidden#game-library(component='Library')
+    webview(src='http://youtube.com' style="width: 100%; height: calc(100vh - 64px)")
